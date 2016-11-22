@@ -13,9 +13,15 @@ class Node():
         for elem in array:
             self.append(elem)
 
+    def append_node(self, node):
+        n = self
+        while n.next != None:
+            n = n.next
+        n.next = node
+
     def to_list(self):
         res = []
-        curr = n
+        curr = self
         while curr != None:
             res.append(curr.data)
             curr = curr.next
